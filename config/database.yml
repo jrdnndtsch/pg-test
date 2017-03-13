@@ -11,8 +11,8 @@ default: &default
 
 development:
   <<: *default
-  database: test
-  username: testuser
+  database: mylocaldb
+  username: 
   password:
 
 

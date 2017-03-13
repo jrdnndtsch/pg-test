@@ -35,6 +35,12 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rails_12factor', group: :production
 
+
+gem 'devise'
+gem 'omniauth-facebook'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
