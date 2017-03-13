@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'activities#index'
 
- devise_for :users, skip: [:sessions]
+ devise_for :users,:controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }, skip: [:sessions]
  as :user do
-   get 'signin', to: 'devise/sessions#new', as: :new_user_session
-   post 'signin', to: 'devise/sessions#create', as: :user_session
-   delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
+   get 'sign_in', to: 'devise/sessions#new', as: :new_user_session
+   post 'sign_in', to: 'devise/sessions#create', as: :user_session
+   delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
  end
 end
